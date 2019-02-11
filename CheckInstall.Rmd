@@ -124,13 +124,13 @@ cat(toLatex(sessionInfo()), file="tmp-1-killme.tex")
 # R Pakete
 
 ```{r, echo=FALSE, width=70}
-needed_pkgs_df <- read.csv("../prelude/prelude.csv", stringsAsFactors = FALSE)
-cat("\\begin{itemize}\n", file="tmp-2-killme.tex")
-for (pkg in needed_pkgs_df$packages)
-   cat("\\item", pkg, "\t Version: ", packageDescription(pkg, fields = "Version"), "\n", append=TRUE, file="tmp-2-killme.tex")
-cat("\\end{itemize}\n", append=TRUE, file="tmp-2-killme.tex")
+# needed_pkgs_df <- read.csv("../prelude/prelude.csv", stringsAsFactors = FALSE)
+# cat("\\begin{itemize}\n", file="tmp-2-killme.tex")
+# for (pkg in needed_pkgs_df$packages) 
+#   cat("\\item", pkg, "\t Version: ", packageDescription(pkg, fields = "Version"), "\n", # append=TRUE, file="tmp-2-killme.tex")
+# cat("\\end{itemize}\n", append=TRUE, file="tmp-2-killme.tex")
+# %\input{tmp-2-killme}
 ```
-\input{tmp-2-killme}
 
 # Pandoc
 
@@ -161,11 +161,12 @@ if (.Platform$OS.type == "unix") {
 # Python
 
 ```{r, include=FALSE, echo=FALSE}
-    cat("\\begin{itemize}\n", file="tmp-3-killme.tex")
-    cat(print(paste(readLines(pipe(file.path("..", "pandoc-filter", "debug-stdout.py"))))), append=TRUE, file="tmp-3-killme.tex")
-    cat("\\end{itemize}\n", append=TRUE, file="tmp-3-killme.tex")
+#    cat("\\begin{itemize}\n", file="tmp-3-killme.tex")
+#    cat(print(paste(readLines(pipe(file.path("..", "pandoc-filter", "debug-stdout.py"))))), append=TRUE, file="tmp-3-killme.tex")
+#    cat("\\end{itemize}\n", append=TRUE, file="tmp-3-killme.tex")
+#%\input{tmp-3-killme}
 ```
-\input{tmp-3-killme}
+
 
 # Local OS
 
